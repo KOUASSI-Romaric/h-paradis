@@ -1,0 +1,90 @@
+{% extends 'main.html' %}
+{%block content%}
+{%load static%}
+	<!-- end:fh5co-header -->
+	<aside id="fh5co-hero" class="js-fullheight">
+		<div class="flexslider js-fullheight">
+			<ul class="slides">
+		   	<li style="background-image: url({% static 'img/slider1.jpg' %});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
+		   				<div class="slider-text-inner js-fullheight">
+		   					<div class="desc">
+		   						<p><span>Chambre de Classe</span></p>
+		   						<h2>Reserve Room for Family Vacation</h2>
+			   					<p>
+			   						<a href="{% url 'reservation'%}" class="btn btn-primary btn-lg">Book Now</a>
+			   					</p>
+		   					</div>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url({% static 'img/slider2.jpeg' %});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
+		   				<div class="slider-text-inner js-fullheight">
+		   					<div class="desc">
+		   						<p><span>Chambres Deux Pièces</span></p>
+		   						<h2>Make Your Vacation Comfortable</h2>
+			   					<p>
+			   						<a href="{%url 'reservation'%}" class="btn btn-primary btn-lg">Book Now</a>
+			   					</p>
+		   					</div>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url({% static 'img/slider3.jpeg' %});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
+		   				<div class="slider-text-inner js-fullheight">
+		   					<div class="desc">
+		   						<p><span>Villa + salle de réunion</span></p>
+		   						<h2>A Best Place To Enjoy Your Life</h2>
+			   					<p>
+			   						<a href="{%url 'reservation'%}" class="btn btn-primary btn-lg">Book Now</a>
+			   					</p>
+		   					</div>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+
+		  	</ul>
+	  	</div>
+	</aside>
+	<div id="fh5co-blog-section">
+		<div class="container">
+			<div class="row">
+				 {%for article in list_article %}
+        <div class="col-12 col-md-6 col-lg-3 col-xl-3">
+          <div class="card ">
+              {%if article.image == "http://default"%}
+              <a href="{%url 'detail' article.id%}">
+                <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="Card image cap" style="height: 150px"/>
+            </a>
+              {%else%}
+            <a href="{%url 'detail' article.id%}">
+                <img class="card-img-top" src="{{article.image.url}}" alt="Card image cap" style="height: 150px"/>
+            </a>
+            {%endif%}
+          <div class="card-body" style="height:230px">
+            <h5 class="card-title"><a href="{%url 'detail' article.id%}">{{article.title}}</a></h5>
+
+            <p class="card-text">{{article.desc|truncatewords:8}}</p>
+
+            <p class="card-text">Publier il y a {{article.create_at|timesince}}</p>
+            <a href="{%url 'detail' article.id%}" class="btn btn-primary">Lire la suite</a>
+          </div>
+        </div>
+        </div>
+        {%endfor%}
+
+			</div>
+		</div>
+	</div>
+{%endblock%}

@@ -1,0 +1,108 @@
+{% extends 'main.html' %}
+{%load static%}
+{%block content%}
+<aside id="fh5co-hero" class="js-fullheight">
+		<div class="flexslider js-fullheight">
+			<ul class="slides">
+		   	<li style="background-image: url({% static 'img/slider1.jpg' %});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
+		   				<div class="slider-text-inner js-fullheight">
+		   					<div class="desc">
+		   						<p><span>Chambre de Classe</span></p>
+		   						<h2>Reserve Room for Family Vacation</h2>
+			   					<p>
+			   						<a href="{% url 'reservation'%}" class="btn btn-primary btn-lg">Book Now</a>
+			   					</p>
+		   					</div>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url({% static 'img/slider2.jpeg' %});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
+		   				<div class="slider-text-inner js-fullheight">
+		   					<div class="desc">
+		   						<p><span>Chambres Deux Pièces</span></p>
+		   						<h2>Make Your Vacation Comfortable</h2>
+			   					<p>
+			   						<a href="{%url 'reservation'%}" class="btn btn-primary btn-lg">Book Now</a>
+			   					</p>
+		   					</div>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url({% static 'img/slider3.jpeg' %});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
+		   				<div class="slider-text-inner js-fullheight">
+		   					<div class="desc">
+		   						<p><span>Villa + salle de réunion</span></p>
+		   						<h2>A Best Place To Enjoy Your Life</h2>
+			   					<p>
+			   						<a href="{%url 'reservation'%}" class="btn btn-primary btn-lg">Book Now</a>
+			   					</p>
+		   					</div>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+
+		  	</ul>
+	  	</div>
+	</aside>
+    <div id="booking" class="section" style="background-color: #F1F1F1;">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="booking-form col-lg-6 mx-auto">
+                    <form method="POST" action="{% url 'reservation' %}">
+                        {% csrf_token %}
+                        <div class="row no-margin">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <span class="form-label">Check In</span>
+                                    {{ form.check_in_date }}
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <span class="form-label">Check Out</span>
+                                    {{ form.check_out_date }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="form-label">Room Type</span>
+                            {{ form.room }}
+                            <span class="select-arrow"></span>
+                        </div>
+                        <div class="form-group">
+                            <span class="form-label">Email</span>
+                            {{ form.client }}
+                        </div>
+                        <div class="form-group">
+                            <span class="form-label2">Service</span>
+                            {{ form.services }}
+                        </div>
+                        <div class="form-btn">
+                            <button class="submit-btn btn btn-orange">Book Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
+
+
+
+
