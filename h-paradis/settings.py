@@ -7,7 +7,7 @@ import json
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-with open("vars.json", "r") as f:
+with open(str(BASE_DIR / "h-paradis" / "vars.json"), "r") as f:
     vars = json.load(f)
 
 SECRET_KEY = vars["SECRET_KEY"]
