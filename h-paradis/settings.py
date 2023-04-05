@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     "client",
     "reservation",
     "restaurant",
-    "service"
+    "service",
+    "compte",
 ]
 
 MIDDLEWARE = [

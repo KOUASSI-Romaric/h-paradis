@@ -3,70 +3,29 @@
 {%load static%}
 
 	<!-- end:fh5co-header -->
-<aside id="fh5co-hero" class="js-fullheight">
-		<div class="flexslider js-fullheight">
-			<ul class="slides">
-		   	<li style="background-image: url({% static 'img/slider1.jpg' %});">
-		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
-		   				<div class="slider-text-inner js-fullheight">
-		   					<div class="desc">
-		   						<p><span>Chambre de Classe</span></p>
-		   						<h2>Reserve Room for Family Vacation</h2>
-			   					<p>
-			   						<a href="{% url 'reservation'%}" class="btn btn-primary btn-lg">Book Now</a>
-			   					</p>
-		   					</div>
-		   				</div>
-		   			</div>
-		   		</div>
-		   	</li>
-		   	<li style="background-image: url({% static 'img/slider2.jpeg' %});">
-		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
-		   				<div class="slider-text-inner js-fullheight">
-		   					<div class="desc">
-		   						<p><span>Chambres Deux Pièces</span></p>
-		   						<h2>Make Your Vacation Comfortable</h2>
-			   					<p>
-			   						<a href="{%url 'reservation'%}" class="btn btn-primary btn-lg">Book Now</a>
-			   					</p>
-		   					</div>
-		   				</div>
-		   			</div>
-		   		</div>
-		   	</li>
-		   	<li style="background-image: url({% static 'img/slider3.jpeg' %});">
-		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
-		   				<div class="slider-text-inner js-fullheight">
-		   					<div class="desc">
-		   						<p><span>Villa + salle de réunion</span></p>
-		   						<h2>A Best Place To Enjoy Your Life</h2>
-			   					<p>
-			   						<a href="{%url 'reservation'%}" class="btn btn-primary btn-lg">Book Now</a>
-			   					</p>
-		   					</div>
-		   				</div>
-		   			</div>
-		   		</div>
-		   	</li>
+	<div class="fh5co-parallax" style="background-image: url({% static 'img/slider3.jpg' %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+					<div class="fh5co-intro fh5co-table-cell">
+						<h1 class="text-center">Des Chambres de Meilleures Qualités à Votre Service</h1>
 
-		  	</ul>
-	  	</div>
-	</aside>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<div id="fh5co-hotel-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
 					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(img/image-1.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
+						<div class="hotel-grid" style="background-image: url({% static 'img/image-1.jpg' %});">
+							<div class="price"><small>For as low as</small><span>2000FCFA/nuit</span></div>
+							<a class="book-now text-center" href="{%url 'reservation'%}"><i class="ti-calendar"></i> Book Now</a>
 						</div>
 						<div class="desc">
 							<h3><a href="#">Chambre de Classe</a></h3>
@@ -76,9 +35,9 @@
 				</div>
 				<div class="col-md-4">
 					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(img/image-2.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
+						<div class="hotel-grid" style="background-image: url({% static 'img/image-2.jpg' %});">
+							<div class="price"><small>For as low as</small><span>2000FCFA/nuit</span></div>
+							<a class="book-now text-center" href="{%url 'reservation'%}"><i class="ti-calendar"></i> Book Now</a>
 						</div>
 						<div class="desc">
 							<h3><a href="#">Chambre de Classe</a></h3>
@@ -88,9 +47,9 @@
 				</div>
 				<div class="col-md-4">
 					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(img/image-3.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
+						<div class="hotel-grid" style="background-image: url({% static 'img/image-3.jpg' %});">
+							<div class="price"><small>For as low as</small><span>2000FCFA/nuit</span></div>
+							<a class="book-now text-center" href="{%url 'reservation'%}"><i class="ti-calendar"></i> Book Now</a>
 						</div>
 						<div class="desc">
 							<h3><a href="#">Chambres Deux Pièces</a></h3>
@@ -100,9 +59,9 @@
 				</div>
 				<div class="col-md-4">
 					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(img/image-4.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
+						<div class="hotel-grid" style="background-image: url({% static 'img/image-4.jpg' %});">
+							<div class="price"><small>For as low as</small><span>2000FCFA/nuit</span></div>
+							<a class="book-now text-center" href="{%url 'reservation'%}"><i class="ti-calendar"></i> Book Now</a>
 						</div>
 						<div class="desc">
 							<h3><a href="#">Chambres Deux Pièces</a></h3>
@@ -112,9 +71,9 @@
 				</div>
 				<div class="col-md-4">
 					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(img/image-5.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
+						<div class="hotel-grid" style="background-image: url({% static 'img/image-5.jpg' %});">
+							<div class="price"><small>For as low as</small><span>2000FCFA/nuit</span></div>
+							<a class="book-now text-center" href="{%url 'reservation'%}"><i class="ti-calendar"></i> Book Now</a>
 						</div>
 						<div class="desc">
 							<h3><a href="#">Villa + salle de réunion</a></h3>
@@ -124,9 +83,9 @@
 				</div>
 				<div class="col-md-4">
 					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(img/image-6.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
+						<div class="hotel-grid" style="background-image: url({% static 'img/image-6.jpg' %});">
+							<div class="price"><small>For as low as</small><span>2000FCFA/nuit</span></div>
+							<a class="book-now text-center" href="{%url 'reservation'%}"><i class="ti-calendar"></i> Book Now</a>
 						</div>
 						<div class="desc">
 							<h3><a href="#">Villa + salle de réunion</a></h3>

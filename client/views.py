@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
-def list_client(request):
-    return render(request, "")
+@login_required(login_url='login')
+def contact(request):
+    context = {}
+    return render(request, "contact.html", context)
