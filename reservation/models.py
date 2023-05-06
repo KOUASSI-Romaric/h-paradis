@@ -12,5 +12,6 @@ class Reservation(models.Model):
     check_out_date = models.DateField()
     services = models.ManyToManyField(Service, blank=True)
 
+
     def __str__(self):
         return f"{self.client.name} - {self.room.name}"

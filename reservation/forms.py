@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import ModelChoiceField, ModelMultipleChoiceField, DateInput
 from .models import Client, Chambre, Reservation, Service
+from django.contrib.auth.models import User
 
 
 class ReservationForm(forms.ModelForm):

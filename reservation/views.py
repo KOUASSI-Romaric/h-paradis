@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from .models import Client, Chambre, Reservation, Service
 from .forms import ReservationForm
 from django.contrib.auth.decorators import login_required
@@ -23,7 +23,7 @@ def reservation(request):
             reservation.client = client
             reservation.save()
             form.save_m2m()
-            return redirect('tkanks')
+            return HttpResponse("Votre reservation a été effectué. Régler la facture une sur place")
     else:
         '''room_id ='' # request.GET.get('room')
         room = "" #Chambre.objects.get(id=room_id)
@@ -36,5 +36,5 @@ def reservation(request):
 
 def thanks(request):
 
-    return render(request, 'thanks.html')
+    return render(request, 'tkanks.html')
 
